@@ -1,0 +1,160 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f7fb;
+  color: #1f2937;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.app-container {
+  width: min(100% - 32px, 900px);
+  margin: 40px auto;
+}
+
+.app-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.app-header h1 {
+  color: #2563eb;
+  font-size: 2.2rem;
+  margin-bottom: 8px;
+}
+
+form,
+.tasks-section {
+  background: white;
+  padding: 24px;
+  margin-bottom: 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgb(0 0 0 / 6%);
+}
+
+form {
+  display: grid;
+  gap: 10px;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  margin-bottom: 8px;
+}
+
+textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+button {
+  padding: 10px 14px;
+  border: none;
+  border-radius: 6px;
+  background: #2563eb;
+  color: white;
+}
+
+button:hover {
+  opacity: 0.88;
+}
+
+.filters,
+.task-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 16px 0;
+}
+
+.filters button {
+  background: #e5e7eb;
+  color: #374151;
+}
+
+.filters button.selected {
+  background: #2563eb;
+  color: white;
+}
+
+.task-list {
+  display: grid;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.task-card {
+  padding: 18px;
+  border: 1px solid #dbe3ef;
+  border-left: 5px solid #2563eb;
+  border-radius: 8px;
+  overflow-wrap: anywhere;
+}
+
+.task-card h3 {
+  margin-top: 0;
+}
+
+.task-card.completed {
+  background: #f0fdf4;
+  border-left-color: #16a34a;
+}
+
+.task-card.completed h3 {
+  text-decoration: line-through;
+  color: #64748b;
+}
+
+.task-actions button:last-child {
+  background: #dc2626;
+}
+
+.empty-state {
+  padding: 24px 0;
+  color: #64748b;
+  text-align: center;
+}
+
+form [role="alert"] {
+  color: #dc2626;
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  .app-container {
+    width: calc(100% - 20px);
+    margin: 20px auto;
+  }
+
+  form,
+  .tasks-section {
+    padding: 16px;
+  }
+
+  .app-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .task-actions button {
+    flex: 1;
+  }
+}
